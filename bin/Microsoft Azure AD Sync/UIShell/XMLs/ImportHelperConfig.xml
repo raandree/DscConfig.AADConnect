@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mahelperconfigurations>
+    <management-agent type="AD">
+        <importhelperclass>Microsoft.DirectoryServices.MetadirectoryServices.UI.PropertySheetBase.AdMaPropertyPages.ImportHelper</importhelperclass>
+        <assemblyurl>AdMaPropertyPages.dll</assemblyurl>
+    </management-agent>
+    <management-agent type="ADAM">
+        <importhelperclass>Microsoft.DirectoryServices.MetadirectoryServices.UI.PropertySheetBase.AdMaPropertyPages.ImportHelper</importhelperclass>
+        <assemblyurl>AdMaPropertyPages.dll</assemblyurl>
+    </management-agent>
+    <management-agent type="LDIF">
+        <importhelperclass>Microsoft.DirectoryServices.MetadirectoryServices.UI.PropertySheetBase.XmlMaPropertyPages.ImportHelper</importhelperclass>
+        <assemblyurl>XmlMaPropertyPages.dll</assemblyurl>
+    </management-agent>
+    <management-agent type="Delimited">
+        <importhelperclass>Microsoft.DirectoryServices.MetadirectoryServices.UI.PropertySheetBase.XmlMaPropertyPages.ImportHelper</importhelperclass>
+        <assemblyurl>XmlMaPropertyPages.dll</assemblyurl>
+    </management-agent>
+    <management-agent type="Fixed">
+        <importhelperclass>Microsoft.DirectoryServices.MetadirectoryServices.UI.PropertySheetBase.XmlMaPropertyPages.ImportHelper</importhelperclass>
+        <assemblyurl>XmlMaPropertyPages.dll</assemblyurl>
+    </management-agent>
+    <management-agent type="AVP">
+        <importhelperclass>Microsoft.DirectoryServices.MetadirectoryServices.UI.PropertySheetBase.XmlMaPropertyPages.ImportHelper</importhelperclass>
+        <assemblyurl>XmlMaPropertyPages.dll</assemblyurl>
+    </management-agent>
+    <management-agent type="DSML">
+        <importhelperclass>Microsoft.DirectoryServices.MetadirectoryServices.UI.PropertySheetBase.XmlMaPropertyPages.ImportHelper</importhelperclass>
+        <assemblyurl>XmlMaPropertyPages.dll</assemblyurl>
+    </management-agent>
+    <management-agent type="Extensible">
+        <importhelperclass>Microsoft.DirectoryServices.MetadirectoryServices.UI.PropertySheetBase.XmlMaPropertyPages.ImportHelper</importhelperclass>
+        <assemblyurl>XmlMaPropertyPages.dll</assemblyurl>
+    </management-agent>
+    <management-agent type="Extensible2">
+        <importhelperclass>Microsoft.DirectoryServices.MetadirectoryServices.UI.PropertySheetBase.XmlMaPropertyPages.ImportHelper</importhelperclass>
+        <assemblyurl>XmlMaPropertyPages.dll</assemblyurl>
+    </management-agent>
+</mahelperconfigurations>

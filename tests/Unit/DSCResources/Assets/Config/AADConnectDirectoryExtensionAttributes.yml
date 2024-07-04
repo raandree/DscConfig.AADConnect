@@ -1,0 +1,16 @@
+Items:
+  - Name: comment
+    Type: string
+    AssignedObjectClass: user
+    IsEnabled: True
+    Ensure: Present
+  - Name: employeeType
+    Type: string
+    AssignedObjectClass: user
+    IsEnabled: true
+    Ensure: Present
+  - Name: sAMAccountName
+    Type: string
+    AssignedObjectClass: user
+    IsEnabled: true
+    Ensure: Present

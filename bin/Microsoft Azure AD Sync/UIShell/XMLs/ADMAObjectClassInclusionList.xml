@@ -1,0 +1,10 @@
+﻿<objectclassinclusionlist>
+  <oc>contact</oc>
+  <oc>container</oc>
+  <oc>group</oc>
+  <oc>inetOrgPerson</oc>
+  <oc>organizationalUnit</oc>
+  <oc>user</oc>
+  <oc>device</oc>
+  <oc>msDs-Device</oc>
+</objectclassinclusionlist>

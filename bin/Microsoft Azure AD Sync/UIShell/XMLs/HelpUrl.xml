@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<helps>
+    <helpsite>
+        <!--
+        <url>http://localhost/MmsShell/helpfiles/</url>
+        -->
+        <url>helpfiles\</url>
+        <chm-set name="mms.chm">
+            <chm language="en">378339</chm>
+            <chm language="ja">378339</chm>
+            <chm language="de">378339</chm>
+        </chm-set>
+        <chm-set name="mmsdev.chm">
+            <chm language="en">105990</chm>
+            <chm language="ja">105990</chm>
+            <chm language="de">105990</chm>
+        </chm-set>
+    </helpsite>
+</helps>

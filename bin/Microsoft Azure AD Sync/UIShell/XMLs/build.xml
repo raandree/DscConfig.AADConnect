@@ -1,0 +1,5 @@
+<build_template>
+rem Ensure the csharp compiler is in your machine's path.
+rem set PATH=C:\WINDOWS\Microsoft.NET\Framework\v1.0.3705;%PATH%
+csc /t:exe /debug /out:<csfile_name></csfile_name>.exe /r:System.dll;System.Management.dll <csfile_name></csfile_name>.cs
+</build_template>

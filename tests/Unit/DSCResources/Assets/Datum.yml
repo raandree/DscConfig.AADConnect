@@ -1,0 +1,4 @@
+ResolutionPrecedence:
+- Config
+
+default_lookup_options: MostSpecific

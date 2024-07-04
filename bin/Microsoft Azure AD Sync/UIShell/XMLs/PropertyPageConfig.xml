@@ -1,0 +1,59 @@
+<propertypageconfiguration>
+   <management-agent type="AD">
+      <attribinclusionfile>ADMAAttributeInclusionList.xml</attribinclusionfile>
+      <mandatoryattribsfile>ADMAMandatoryAttributeList.xml</mandatoryattribsfile>
+      <ocinclusionfile>ADMAObjectClassInclusionList.xml</ocinclusionfile>
+      <mandatoryocfile>ADMAMandatoryObjectClassList.xml</mandatoryocfile>
+
+      <mauisettinginitializationdata>ADUISettingInit.xml</mauisettinginitializationdata>
+      <assembly>AdMaPropertyPages</assembly>
+      <descriptionresourceroot>Microsoft.DirectoryServices.MetadirectoryServices.UI.PropertySheetBase.AdMaPropertyPages.Strings</descriptionresourceroot>
+      <descriptionresourcename>maTypeDescription</descriptionresourcename>
+   </management-agent>
+   <management-agent type="ADAM">
+      <attribinclusionfile>ADMAAttributeInclusionList.xml</attribinclusionfile>
+      <mandatoryattribsfile>ADMAMandatoryAttributeList.xml</mandatoryattribsfile>
+      <ocinclusionfile>ADMAObjectClassInclusionList.xml</ocinclusionfile>
+      <mandatoryocfile>ADMAMandatoryObjectClassList.xml</mandatoryocfile>
+
+      <mauisettinginitializationdata>ADUISettingInit.xml</mauisettinginitializationdata>
+      <assembly>AdMaPropertyPages</assembly>
+      <descriptionresourceroot>Microsoft.DirectoryServices.MetadirectoryServices.UI.PropertySheetBase.AdMaPropertyPages.Strings</descriptionresourceroot>
+      <descriptionresourcename>maTypeADAMDescription</descriptionresourcename>
+   </management-agent>
+   <management-agent type="LDIF">
+      <assembly>XmlMaPropertyPages</assembly>
+      <descriptionresourceroot>Microsoft.DirectoryServices.MetadirectoryServices.UI.PropertySheetBase.XmlMaPropertyPages.Strings</descriptionresourceroot>
+      <descriptionresourcename>maTypeDescriptionLDIF</descriptionresourcename>
+   </management-agent>
+   <management-agent type="Delimited">
+      <assembly>XmlMaPropertyPages</assembly>
+      <descriptionresourceroot>Microsoft.DirectoryServices.MetadirectoryServices.UI.PropertySheetBase.XmlMaPropertyPages.Strings</descriptionresourceroot>
+      <descriptionresourcename>maTypeDescriptionDelimited</descriptionresourcename>
+   </management-agent>
+   <management-agent type="Fixed">
+      <assembly>XmlMaPropertyPages</assembly>
+      <descriptionresourceroot>Microsoft.DirectoryServices.MetadirectoryServices.UI.PropertySheetBase.XmlMaPropertyPages.Strings</descriptionresourceroot>
+      <descriptionresourcename>maTypeDescriptionFixed</descriptionresourcename>
+   </management-agent>
+   <management-agent type="AVP">
+      <assembly>XmlMaPropertyPages</assembly>
+      <descriptionresourceroot>Microsoft.DirectoryServices.MetadirectoryServices.UI.PropertySheetBase.XmlMaPropertyPages.Strings</descriptionresourceroot>
+      <descriptionresourcename>maTypeDescriptionAVP</descriptionresourcename>
+   </management-agent>
+   <management-agent type="DSML">
+      <assembly>XmlMaPropertyPages</assembly>
+      <descriptionresourceroot>Microsoft.DirectoryServices.MetadirectoryServices.UI.PropertySheetBase.XmlMaPropertyPages.Strings</descriptionresourceroot>
+      <descriptionresourcename>maTypeDescriptionDSML</descriptionresourcename>
+   </management-agent>
+   <management-agent type="Extensible">
+      <assembly>XmlMaPropertyPages</assembly>
+      <descriptionresourceroot>Microsoft.DirectoryServices.MetadirectoryServices.UI.PropertySheetBase.XmlMaPropertyPages.Strings</descriptionresourceroot>
+      <descriptionresourcename>maTypeDescriptionExtensible</descriptionresourcename>
+   </management-agent>
+   <management-agent type="Extensible2">
+      <assembly>XmlMaPropertyPages</assembly>
+      <descriptionresourceroot>Microsoft.DirectoryServices.MetadirectoryServices.UI.PropertySheetBase.XmlMaPropertyPages.Strings</descriptionresourceroot>
+      <descriptionresourcename>maTypeDescriptionExtensible2</descriptionresourcename>
+   </management-agent>
+</propertypageconfiguration>

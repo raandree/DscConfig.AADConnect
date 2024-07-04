@@ -1,0 +1,668 @@
+Items:
+  - Name: 01 - ContosoGroup Custom - A01 - In from AD - User Join
+    Description: |-
+      Distributed: 2019-08-08
+      Prev name: In from AD - User Join - Cloned - 2019-08-08
+      Cloned from rule 'In from AD - User Join'
+    ConnectorName: contoso.com
+    Direction: Inbound
+    Disabled: false
+    SourceObjectType: user
+    TargetObjectType: person
+    Precedence: 1
+    LinkType: Provision
+    EnablePasswordSync: false
+    JoinFilter:
+    - JoinConditionList:
+      - CSAttribute: objectSid
+        MVAttribute: objectSid
+        CaseSensitive: false
+    - JoinConditionList:
+      - CSAttribute: msExchMasterAccountSid
+        MVAttribute: objectSid
+        CaseSensitive: false
+    - JoinConditionList:
+      - CSAttribute: objectSid
+        MVAttribute: msExchMasterAccountSid
+        CaseSensitive: false
+    - JoinConditionList:
+      - CSAttribute: objectSid
+        MVAttribute: msRTCSIP-OriginatorSid
+        CaseSensitive: false
+    - JoinConditionList:
+      - CSAttribute: mail
+        MVAttribute: mail
+        CaseSensitive: false
+    - JoinConditionList:
+      - CSAttribute: contosogroupGID
+        MVAttribute: extension_contosogroupGID
+        CaseSensitive: false
+      - CSAttribute: sAMAccountName
+        MVAttribute: accountName
+        CaseSensitive: false
+      - CSAttribute: employeeType
+        MVAttribute: extension_employeeType
+        CaseSensitive: false
+    ScopeFilter:
+    - ScopeConditionList:
+      - Attribute: employeeType
+        ComparisonValue: P
+        ComparisonOperator: EQUAL
+      - Attribute: contosogroupMSAzureADCloudUser
+        ComparisonValue: "False"
+        ComparisonOperator: NOTCONTAINS
+      - Attribute: contosogroupADMigration01
+        ComparisonValue: "50"
+        ComparisonOperator: GREATERTHAN_OR_EQUAL
+      - Attribute: mS-DS-ConsistencyGuid
+        ComparisonValue: ""
+        ComparisonOperator: ISNOTNULL
+    - ScopeConditionList:
+      - Attribute: employeeType
+        ComparisonValue: R
+        ComparisonOperator: EQUAL
+      - Attribute: contosogroupMSAzureADCloudUser
+        ComparisonValue: "False"
+        ComparisonOperator: NOTCONTAINS
+      - Attribute: contosogroupADMigration01
+        ComparisonValue: "50"
+        ComparisonOperator: GREATERTHAN_OR_EQUAL
+    - ScopeConditionList:
+      - Attribute: employeeType
+        ComparisonValue: RR
+        ComparisonOperator: EQUAL
+      - Attribute: contosogroupMSAzureADCloudUser
+        ComparisonValue: "False"
+        ComparisonOperator: NOTCONTAINS
+      - Attribute: contosogroupADMigration01
+        ComparisonValue: "50"
+        ComparisonOperator: GREATERTHAN_OR_EQUAL
+    - ScopeConditionList:
+      - Attribute: employeeType
+        ComparisonValue: RS
+        ComparisonOperator: EQUAL
+      - Attribute: contosogroupMSAzureADCloudUser
+        ComparisonValue: "False"
+        ComparisonOperator: NOTCONTAINS
+      - Attribute: contosogroupADMigration01
+        ComparisonValue: "50"
+        ComparisonOperator: GREATERTHAN_OR_EQUAL
+    - ScopeConditionList:
+      - Attribute: employeeType
+        ComparisonValue: RE
+        ComparisonOperator: EQUAL
+      - Attribute: contosogroupMSAzureADCloudUser
+        ComparisonValue: "False"
+        ComparisonOperator: NOTCONTAINS
+      - Attribute: contosogroupADMigration01
+        ComparisonValue: "50"
+        ComparisonOperator: GREATERTHAN_OR_EQUAL
+    - ScopeConditionList:
+      - Attribute: employeeType
+        ComparisonValue: XP
+        ComparisonOperator: EQUAL
+      - Attribute: contosogroupMSAzureADCloudUser
+        ComparisonValue: "False"
+        ComparisonOperator: NOTCONTAINS
+      - Attribute: contosogroupADMigration01
+        ComparisonValue: "50"
+        ComparisonOperator: GREATERTHAN_OR_EQUAL
+      - Attribute: mS-DS-ConsistencyGuid
+        ComparisonValue: ""
+        ComparisonOperator: ISNOTNULL
+    - ScopeConditionList:
+      - Attribute: employeeType
+        ComparisonValue: XS
+        ComparisonOperator: EQUAL
+      - Attribute: contosogroupMSAzureADCloudUser
+        ComparisonValue: "False"
+        ComparisonOperator: NOTCONTAINS
+      - Attribute: contosogroupADMigration01
+        ComparisonValue: "50"
+        ComparisonOperator: GREATERTHAN_OR_EQUAL
+    - ScopeConditionList:
+      - Attribute: employeeType
+        ComparisonValue: XT
+        ComparisonOperator: EQUAL
+      - Attribute: contosogroupMSAzureADCloudUser
+        ComparisonValue: "False"
+        ComparisonOperator: NOTCONTAINS
+      - Attribute: contosogroupADMigration01
+        ComparisonValue: "50"
+        ComparisonOperator: GREATERTHAN_OR_EQUAL
+    - ScopeConditionList:
+      - Attribute: employeeType
+        ComparisonValue: S
+        ComparisonOperator: EQUAL
+      - Attribute: contosogroupMSAzureADCloudUser
+        ComparisonValue: ContosoGroup
+        ComparisonOperator: EQUAL
+    - ScopeConditionList:
+      - Attribute: employeeType
+        ComparisonValue: X
+        ComparisonOperator: EQUAL
+      - Attribute: contosogroupMSAzureADCloudUser
+        ComparisonValue: "False"
+        ComparisonOperator: NOTCONTAINS
+      - Attribute: contosogroupADMigration01
+        ComparisonValue: "50"
+        ComparisonOperator: GREATERTHAN_OR_EQUAL
+      - Attribute: mS-DS-ConsistencyGuid
+        ComparisonValue: ""
+        ComparisonOperator: ISNOTNULL
+    - ScopeConditionList:
+      - Attribute: employeeType
+        ComparisonValue: S
+        ComparisonOperator: EQUAL
+      - Attribute: mail
+        ComparisonValue: ""
+        ComparisonOperator: ISNOTNULL
+    - ScopeConditionList:
+      - Attribute: employeeType
+        ComparisonValue: XG
+        ComparisonOperator: EQUAL
+      - Attribute: contosogroupMSAzureADCloudUser
+        ComparisonValue: ContosoGroup
+        ComparisonOperator: EQUAL
+      - Attribute: contosogroupADMigration01
+        ComparisonValue: "50"
+        ComparisonOperator: GREATERTHAN_OR_EQUAL
+      - Attribute: mS-DS-ConsistencyGuid
+        ComparisonValue: ""
+        ComparisonOperator: ISNOTNULL
+    AttributeFlowMappings: []
+
+  - Name: 02 - ContosoGroup Custom - A01 - In from AD - User Common
+    Description: |-
+      Distributed: 2019-08-08
+      Prev name: In from AD - User Common - Cloned - 2019-08-08
+      Cloned from rule 'In from AD - User Common'
+    ConnectorName: contoso.com
+    Direction: Inbound
+    Disabled: false
+    SourceObjectType: user
+    TargetObjectType: person
+    Precedence: 2
+    LinkType: Join
+    EnablePasswordSync: false
+    JoinFilter: []
+    ScopeFilter:
+    - ScopeConditionList:
+      - Attribute: adminDescription
+        ComparisonValue: User_
+        ComparisonOperator: NOTSTARTSWITH
+    AttributeFlowMappings:
+    - Source: dn
+      Destination: distinguishedName
+      FlowType: Direct
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: ''
+      Destination: accountEnabled
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: IIF(BitAnd([userAccountControl],2)=0,True,False)
+      ValueMergeType: Update
+    - Source: sAMAccountName
+      Destination: accountName
+      FlowType: Direct
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: assistant
+      Destination: assistant
+      FlowType: Direct
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: ''
+      Destination: c
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([c])
+      ValueMergeType: Update
+    - Source: cn
+      Destination: cn
+      FlowType: Direct
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: ''
+      Destination: co
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([co])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: company
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([company])
+      ValueMergeType: Update
+    - Source: countryCode
+      Destination: countryCode
+      FlowType: Direct
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: ''
+      Destination: department
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([department])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: description
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: IIF(IsNullOrEmpty([description]),NULL,Left(Trim(Item([description],1)),448))
+      ValueMergeType: Update
+    - Source: ''
+      Destination: displayName
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: IIF(IsNullOrEmpty([displayName]),[cn],[displayName])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: domainFQDN
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: '%Domain.FQDN%'
+      ValueMergeType: Update
+    - Source: ''
+      Destination: domainNetBios
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: '%Domain.Netbios%'
+      ValueMergeType: Update
+    - Source: employeeID
+      Destination: employeeID
+      FlowType: Direct
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: contosogroupISCompanyCode
+      Destination: extensionAttribute1
+      FlowType: Direct
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: ''
+      Destination: extensionAttribute2
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: IIF((%Domain.FQDN%="tailspintoys.contosog" && IsNumeric([comment])) || (Len([comment])=1 && [comment] = "I"),"I",IIF((%Domain.FQDN%="tailspintoys.contosog" && Left([comment],2)="EX") || (Len([comment])=1 && [comment] = "E"),"E",AuthoritativeNull))
+      ValueMergeType: Update
+    - Source: ''
+      Destination: extensionAttribute3
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: AuthoritativeNull
+      ValueMergeType: Update
+    - Source: ''
+      Destination: extensionAttribute4
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: AuthoritativeNull
+      ValueMergeType: Update
+    - Source: ''
+      Destination: extensionAttribute5
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: AuthoritativeNull
+      ValueMergeType: Update
+    - Source: ''
+      Destination: extensionAttribute6
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: AuthoritativeNull
+      ValueMergeType: Update
+    - Source: ''
+      Destination: extensionAttribute7
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: AuthoritativeNull
+      ValueMergeType: Update
+    - Source: ''
+      Destination: extensionAttribute8
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: AuthoritativeNull
+      ValueMergeType: Update
+    - Source: ''
+      Destination: extensionAttribute9
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: AuthoritativeNull
+      ValueMergeType: Update
+    - Source: ''
+      Destination: extensionAttribute10
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: AuthoritativeNull
+      ValueMergeType: Update
+    - Source: ''
+      Destination: extensionAttribute11
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: AuthoritativeNull
+      ValueMergeType: Update
+    - Source: ''
+      Destination: extensionAttribute12
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: AuthoritativeNull
+      ValueMergeType: Update
+    - Source: ''
+      Destination: extensionAttribute13
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: AuthoritativeNull
+      ValueMergeType: Update
+    - Source: ''
+      Destination: extensionAttribute14
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: AuthoritativeNull
+      ValueMergeType: Update
+    - Source: ''
+      Destination: extensionAttribute15
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: AuthoritativeNull
+      ValueMergeType: Update
+    - Source: ''
+      Destination: facsimileTelephoneNumber
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([facsimileTelephoneNumber])
+      ValueMergeType: Update
+    - Source: a01.contosogroup.com
+      Destination: forestFQDN
+      FlowType: Constant
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: A01
+      Destination: forestNetBios
+      FlowType: Constant
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: ''
+      Destination: givenName
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([givenName])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: homePhone
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([homePhone])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: info
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Left(Trim([info]),448)
+      ValueMergeType: Update
+    - Source: ''
+      Destination: initials
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([initials])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: ipPhone
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([ipPhone])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: l
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([l])
+      ValueMergeType: Update
+    - Source: manager
+      Destination: manager
+      FlowType: Direct
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: ''
+      Destination: middleName
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([middleName])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: mobile
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([mobile])
+      ValueMergeType: Update
+    - Source: objectSid
+      Destination: objectSid
+      FlowType: Direct
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: ''
+      Destination: objectSidString
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: StringFromSid([objectSid])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: otherFacsimileTelephoneNumber
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([otherFacsimileTelephoneNumber])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: otherHomePhone
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([otherHomePhone])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: otherMobile
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([otherMobile])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: otherIpPhone
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([otherIpPhone])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: otherPager
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([otherPager])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: otherTelephone
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([otherTelephone])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: pager
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([pager])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: physicalDeliveryOfficeName
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([physicalDeliveryOfficeName])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: postalCode
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([postalCode])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: postOfficeBox
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: IIF(IsNullOrEmpty([postOfficeBox]),NULL,Left(Trim(Item([postOfficeBox],1)),448))
+      ValueMergeType: Update
+    - Source: ''
+      Destination: preferredLanguage
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([preferredLanguage])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: pwdLastSet
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: IIF(IsPresent([pwdLastSet]),CStr(FormatDateTime(DateFromNum([pwdLastSet]),"yyyyMMddHHmmss.0Z")),NULL)
+      ValueMergeType: Update
+    - Source: ''
+      Destination: sn
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([sn])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: sourceAnchorBinary
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: "\n      IIF(IsPresent([msExchRecipientTypeDetails]),\n          IIF([msExchRecipientTypeDetails]=2,NULL,\n              IIF(\"mS-DS-ConsistencyGuid\"=\"mS-DS-ConsistencyGuid\",\n                  IIF(IsPresent([mS-DS-ConsistencyGuid]),[mS-DS-ConsistencyGuid],[objectGUID]),\n                  NULL)),\n          IIF(\"mS-DS-ConsistencyGuid\"=\"mS-DS-ConsistencyGuid\",\n              IIF(IsPresent([mS-DS-ConsistencyGuid]),[mS-DS-ConsistencyGuid],[objectGUID]),\n              NULL))\n      "
+      ValueMergeType: Update
+    - Source: ''
+      Destination: sourceAnchor
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: IIF(IsPresent([msExchRecipientTypeDetails]),IIF([msExchRecipientTypeDetails]=2,NULL,IIF("mS-DS-ConsistencyGuid"="mS-DS-ConsistencyGuid",IIF(IsPresent([mS-DS-ConsistencyGuid]),IIF(IsString([mS-DS-ConsistencyGuid]),CStr([mS-DS-ConsistencyGuid]),ConvertToBase64([mS-DS-ConsistencyGuid])),IIF(IsString([objectGUID]),CStr([objectGUID]),ConvertToBase64([objectGUID]))),IIF(IsString([mS-DS-ConsistencyGuid]),CStr([mS-DS-ConsistencyGuid]),ConvertToBase64([mS-DS-ConsistencyGuid])))),IIF("mS-DS-ConsistencyGuid"="mS-DS-ConsistencyGuid",IIF(IsPresent([mS-DS-ConsistencyGuid]),IIF(IsString([mS-DS-ConsistencyGuid]),CStr([mS-DS-ConsistencyGuid]),ConvertToBase64([mS-DS-ConsistencyGuid])),IIF(IsString([objectGUID]),CStr([objectGUID]),ConvertToBase64([objectGUID]))),IIF(IsString([mS-DS-ConsistencyGuid]),CStr([mS-DS-ConsistencyGuid]),ConvertToBase64([mS-DS-ConsistencyGuid]))))
+      ValueMergeType: Update
+    - Source: ''
+      Destination: sourceObjectType
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: IIF(IsPresent([msExchRecipientTypeDetails]), IIF([msExchRecipientTypeDetails]=2, NULL, "User"), "User")
+      ValueMergeType: Update
+    - Source: ''
+      Destination: st
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([st])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: streetAddress
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([streetAddress])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: telephoneNumber
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([telephoneNumber])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: thumbnailPhoto
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: AuthoritativeNull
+      ValueMergeType: Update
+    - Source: ''
+      Destination: title
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([title])
+      ValueMergeType: Update
+    - Source: ''
+      Destination: userPrincipalName
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: IIF(IsPresent([mail]),[mail], IIF(IsPresent([sAMAccountName]),([sAMAccountName]&"@"&%Domain.FQDN%),Error("AccountName is not present")))
+      ValueMergeType: Update
+    - Source: ''
+      Destination: url
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: IIF(IsNullOrEmpty([url]),NULL,Left(Trim(Item([url],1)),448))
+      ValueMergeType: Update
+    - Source: ''
+      Destination: wWWHomePage
+      FlowType: Expression
+      ExecuteOnce: false
+      Expression: Trim([wWWHomePage])
+      ValueMergeType: Update
+    - Source: userPrincipalName
+      Destination: onPremisesUserPrincipalName
+      FlowType: Direct
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: contosogroupContractType
+      Destination: extension_contosogroupContractType
+      FlowType: Direct
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: contosogroupISCompanyCode
+      Destination: extension_contosogroupISCompanyCode
+      FlowType: Direct
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: contosogroupGID
+      Destination: extension_contosogroupGID
+      FlowType: Direct
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: employeeType
+      Destination: extension_employeeType
+      FlowType: Direct
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: contosogroupCostCenter
+      Destination: extension_contosogroupCostCenter
+      FlowType: Direct
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: contosogroupCostCenterLong
+      Destination: extension_contosogroupCostCenterLong
+      FlowType: Direct
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: contosogroupMsOnlineLicenseType
+      Destination: extension_contosogroupMsOnlineLicenseType
+      FlowType: Direct
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: contosogroupPreferredUserID
+      Destination: extension_contosogroupPreferredUserID
+      FlowType: Direct
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: contosogroupADMigration01
+      Destination: extension_contosogroupADMigration01
+      FlowType: Direct
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update
+    - Source: altSecurityIdentities
+      Destination: extension_altSecurityIdentities
+      FlowType: Direct
+      ExecuteOnce: false
+      Expression:
+      ValueMergeType: Update

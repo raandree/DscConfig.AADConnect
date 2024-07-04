@@ -1,0 +1,425 @@
+﻿<?xml version = "1.0" encoding = "utf-8" ?>
+<helpItems schema="maml">
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-ADSyncCSGroupSummary</command:name>
+      <maml:description>
+        <maml:para>Gets the count of the groups for a given member count.</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+      <command:verb>Get</command:verb>
+      <command:noun>ADSyncCSGroupSummary</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>The cmdlet will be used to retrieve the count of the groups for a given member count. </maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-ADSyncCSGroupSummary</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="named" aliases="">
+          <maml:name>Connector Identity</maml:name>
+          <maml:description>
+            <maml:para>Specifies an connector details following property values. The acceptable values for this parameter are: 
+-- A Connector Name
+-- A Connector GUID (objectGUID)
+            </maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="named" aliases="">
+          <maml:name>MinimumMemberCount</maml:name>
+          <maml:description>
+            <maml:para>The minimum minimum member count present in the group</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
+        </command:parameter>
+        <!-- Additional parameter elements for each additional parameter. -->
+        
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" globbing="true" pipelineInput="false" position="named">
+        <maml:name>ConnectorName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+        <maml:description>
+          <maml:para>The name of the connector</maml:para>
+        </maml:description>
+        <dev:type>String</dev:type>
+        <dev:defaultvalue></dev:defaultvalue>
+        <dev:possiblevalues>
+          <dev:possiblevalue>
+            <dev:value>contoso.com</dev:value>
+            <maml:description>
+              <maml:para>connector name</maml:para>
+            </maml:description>
+          </dev:possiblevalue>
+        </dev:possiblevalues>
+      </command:parameter>
+      <command:parameter required="true" globbing="true" pipelineInput="false"  position="named">
+        <maml:name>ConnectorIdentifier</maml:name>
+        <command:parameterValue required="true">GUID</command:parameterValue>
+        <maml:description>
+          <maml:para>connector id</maml:para>
+        </maml:description>
+        <dev:type>Guid</dev:type>
+        <dev:defaultvalue>null</dev:defaultvalue>
+      </command:parameter>
+      <command:parameter required="true" globbing="true" pipelineInput="false"  position="named">
+        <maml:name>MinimumMemberCount</maml:name>
+        <command:parameterValue required="true">Int32</command:parameterValue>
+        <maml:description>
+          <maml:para>Minimum member in the group</maml:para>
+        </maml:description>
+        <dev:type>Int32</dev:type>
+        <dev:defaultvalue>null</dev:defaultvalue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>connector id or name</maml:name>
+          <maml:uri></maml:uri>
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+        <maml:description>
+          <maml:para>member count. </maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>group count</maml:name>
+          <maml:uri></maml:uri>
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+        <maml:description>
+          <maml:para>Returns one the number of groups </maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors />
+    <command:nonTerminatingErrors />
+    <maml:alertSet>
+      <maml:title />
+      <maml:alert>
+        <maml:para>This cmdlet does not work if the ADSync module is not present. </maml:para>
+      </maml:alert>
+      <maml:alert></maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>
+
+          -------------------------- EXAMPLE 1 --------------------------
+
+        </maml:title>
+        <maml:introduction>
+          <maml:para></maml:para>
+        </maml:introduction>
+        <dev:code>PS C:\&gt;Get-ADSyncCSGroupSummary -ConnectorName contoso.com -MinimumMemberCount 10000
+2345
+        </dev:code>
+        <dev:remarks>
+          <maml:para>This command gets all the groups for the given member count and connector name.</maml:para>
+        </dev:remarks>
+        <command:commandLines>
+          <command:commandLine>
+            <command:commandText />
+          </command:commandLine>
+        </command:commandLines>
+      </command:example>
+      <command:example>
+        <maml:title>
+
+          -------------------------- EXAMPLE 2 --------------------------
+
+        </maml:title>
+        <maml:introduction>
+          <maml:para></maml:para>
+        </maml:introduction>
+        <dev:code>PS C:\&gt;Get-ADSyncCSGroupSummary -ConnectorIdentifier 'C4F325D6-23D1-E911-80BD-00155D0C3815' -MinimumMemberCount 10000
+2345
+        </dev:code>
+        <dev:remarks>
+          <maml:para>This command gets all the groups for the given member count and Connector id.</maml:para>
+        </dev:remarks>
+        <command:commandLines>
+          <command:commandLine>
+            <command:commandText />
+          </command:commandLine>
+        </command:commandLines>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-sync-feature-scheduler</maml:uri>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-ADSyncCSGroupStatistics</command:name>
+      <maml:description>
+        <maml:para>Gets the details the groups for a given member count.</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+      <command:verb>Get</command:verb>
+      <command:noun>ADSyncCSGroupStatistics</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+     <maml:para>The Get-ADSyncCSGroupStatistics cmdlet performs a search to retrieve multiple group objects for the given member count. </maml:para>
+      <maml:para>The Identity parameter specifies the connector to get. You can identify a connector by its GUID or name. You can also set the parameter to a group object variable, such as $&lt;localGroupObject&gt;  </maml:para><maml:para>This cmdlet retrieves a set of group objects sorted on member count desc by default. To retrieve filtered/paged groups use the filter parameters. For more information about the how to filter the group objects, see the Properties parameter description. </maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-ADSyncCSGroupStatistics</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="named" aliases="">
+          <maml:name>Connector Identity</maml:name>
+          <maml:description>
+            <maml:para>
+              Specifies an connector details following property values. The acceptable values for this parameter are: 
+
+-- A Connector Name
+-- A Connector GUID (objectGUID)
+            </maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="named" aliases="">
+          <maml:name>MinimumMemberCount</maml:name>
+          <maml:description>
+            <maml:para>The minimum minimum member count present in the group</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="named" aliases="">
+          <maml:name>StartIndex</maml:name>
+          <maml:description>
+            <maml:para>start record row number</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="named" aliases="">
+          <maml:name>MaxResultCount</maml:name>
+          <maml:description>
+            <maml:para>Maximum rows to fetch</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
+        </command:parameter>
+        <!-- Additional parameter elements for each additional parameter. -->
+
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" globbing="true" pipelineInput="false" position="named">
+        <maml:name>ConnectorName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+        <maml:description>
+          <maml:para>The name of the connector</maml:para>
+        </maml:description>
+        <dev:type>String</dev:type>
+        <dev:defaultvalue></dev:defaultvalue>
+        <dev:possiblevalues>
+          <dev:possiblevalue>
+            <dev:value>contoso.com</dev:value>
+            <maml:description>
+              <maml:para>connector name</maml:para>
+            </maml:description>
+          </dev:possiblevalue>
+        </dev:possiblevalues>
+      </command:parameter>
+      <command:parameter required="true" globbing="true" pipelineInput="false"  position="named">
+        <maml:name>ConnectorIdentifier</maml:name>
+        <command:parameterValue required="true">GUID</command:parameterValue>
+        <maml:description>
+          <maml:para>connector id</maml:para>
+        </maml:description>
+        <dev:type>Guid</dev:type>
+        <dev:defaultvalue>null</dev:defaultvalue>
+      </command:parameter>
+      <command:parameter required="true" globbing="true" pipelineInput="false"  position="named">
+        <maml:name>MinimumMemberCount</maml:name>
+        <command:parameterValue required="true">Int32</command:parameterValue>
+        <maml:description>
+          <maml:para>Minimum member in the group</maml:para>
+        </maml:description>
+        <dev:type>Int32</dev:type>
+        <dev:defaultvalue>null</dev:defaultvalue>
+      </command:parameter>
+      <command:parameter required="true" globbing="true" pipelineInput="false"  position="named">
+        <maml:name>StartIndex</maml:name>
+        <command:parameterValue required="true">Int32</command:parameterValue>
+        <maml:description>
+          <maml:para>start record id</maml:para>
+        </maml:description>
+        <dev:type>Int32</dev:type>
+        <dev:defaultvalue>null</dev:defaultvalue>
+      </command:parameter>
+      <command:parameter required="true" globbing="true" pipelineInput="false"  position="named">
+        <maml:name>MaxResultCount</maml:name>
+        <command:parameterValue required="true">Int32</command:parameterValue>
+        <maml:description>
+          <maml:para>Maximum records to fetch</maml:para>
+        </maml:description>
+        <dev:type>Int32</dev:type>
+        <dev:defaultvalue>null</dev:defaultvalue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>connector id or name</maml:name>
+          <maml:uri></maml:uri>
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+        <maml:description>
+          <maml:para>unique identifier of the connector </maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>MinimumMemberCount</maml:name>
+          <maml:uri></maml:uri>
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+        <maml:description>
+          <maml:para>minimum member count </maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>StartIndex</maml:name>
+          <maml:uri></maml:uri>
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+        <maml:description>
+          <maml:para>starting record number </maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>MaxResultCount</maml:name>
+          <maml:uri></maml:uri>
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+        <maml:description>
+          <maml:para>max rows to get </maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>group count</maml:name>
+          <maml:uri></maml:uri>
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+        <maml:description>
+          <maml:para>Returns one the number of groups </maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors />
+    <command:nonTerminatingErrors />
+    <maml:alertSet>
+      <maml:title />
+      <maml:alert>
+        <maml:para>This cmdlet does not work if the ADSync module is not present. </maml:para>
+      </maml:alert>
+      <maml:alert></maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>
+
+          -------------------------- EXAMPLE 1 --------------------------
+
+        </maml:title>
+        <maml:introduction>
+          <maml:para></maml:para>
+        </maml:introduction>
+        <dev:code>PS C:\&gt;Get-ADSyncCSGroupStatistics -ConnectorName contoso.com -MinimumMemberCount 50000 -StartIndex 0 -MaxResultCount 1
+RowNo            : 1
+ConnectorName    : contoso.com
+Rdn              : CN=Group_318666aa-3d5a-4701-a3a7-1d37f3de57d2
+DisplayName      : Group_318666aa-3d5a-4701-a3a7-1d37f3de57d2
+ObjectId         : c4f325d6-23d1-e911-80bd-00155d0c3815
+DisconnectorFlag : True
+Count            : 16706
+        </dev:code>
+        <dev:remarks>
+          <maml:para>This command gets all the groups with details for the given member count and connector id.</maml:para>
+        </dev:remarks>
+        <command:commandLines>
+          <command:commandLine>
+            <command:commandText />
+          </command:commandLine>
+        </command:commandLines>
+      </command:example>
+      <command:example>
+        <maml:title>
+
+          -------------------------- EXAMPLE 2 --------------------------
+
+        </maml:title>
+        <maml:introduction>
+          <maml:para></maml:para>
+        </maml:introduction>
+        <dev:code>PS C:\&gt;Get-ADSyncCSGroupStatistics -ConnectorIdentifier 'C4F325D6-23D1-E911-80BD-00155D0C3815' -MinimumMemberCount 50000 -StartIndex 0 -MaxResultCount 2
+RowNo            : 1
+ConnectorName    : contoso.com
+Rdn              : CN=Group_318666aa-3d5a-4701-a3a7-1d37f3de57d2
+DisplayName      : Group_318666aa-3d5a-4701-a3a7-1d37f3de57d2
+ObjectId         : c4f325d6-23d1-e911-80bd-00155d0c3815
+DisconnectorFlag : True
+Count            : 16706
+
+RowNo            : 2
+ConnectorName    : contoso.com
+Rdn              : CN=CAIFTEUS
+DisplayName      : CAIFTEUS
+ObjectId         : f4ab33dd-23d1-e911-80bd-00155d0c3815
+DisconnectorFlag : True
+Count            : 16452
+        </dev:code>
+        <dev:remarks>
+          <maml:para>This command gets all the groups with details for the given member count and connector id.</maml:para>
+        </dev:remarks>
+        <command:commandLines>
+          <command:commandLine>
+            <command:commandText />
+          </command:commandLine>
+        </command:commandLines>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <!--This is a forward link. we will update the link once the documentation is ready-->
+        <maml:uri>https://go.microsoft.com/fwlink/?linkid=2103960</maml:uri>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+</helpItems>

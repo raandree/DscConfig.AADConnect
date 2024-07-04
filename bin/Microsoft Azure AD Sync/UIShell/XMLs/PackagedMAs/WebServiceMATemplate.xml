@@ -1,0 +1,483 @@
+<export-ma>
+  <!--WARNING>
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!
+!! The contents of this file should not be edited.
+!! Any such modifications to this file may result in errors during import.
+!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+</WARNING-->
+  <ma-data format="Packaged">
+    <format-version>1</format-version>
+    <internal-version>1</internal-version>
+    <ma-companyname>Microsoft</ma-companyname>
+    <subtype>Microsoft Web Service ECMA2 Connector (Microsoft)</subtype>
+    <ma-listname>Web Service (Microsoft)</ma-listname>
+    <id>{802213B7-E849-4765-B9B7-1E141F8BFE36}</id>
+    <category>Extensible2</category>
+    <password-sync-allowed>0</password-sync-allowed>
+    <schema>
+      <dsml:dsml xmlns:ms-dsml="http://www.microsoft.com/MMS/DSML" xmlns:dsml="http://www.dsml.org/DSML">
+        <dsml:directory-schema ms-dsml:no-objectclass-validation="true">
+          <dsml:class id="Employee" type="structural" ms-dsml:locked="1">
+            <dsml:name>Employee</dsml:name>
+            <dsml:attribute ref="#City" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#Mobile" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#LandLine" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#AddressLine2" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#AddressLine1" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#State" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#PostalCode" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#Country" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#LastName" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#MiddleName" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#CompanyCode" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#CertificateID" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#DepartmentID" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#User" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#FirstName" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#BirthDate" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#DisplayName" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#Initials" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#ModifiedDate" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#Email" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#Gender" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#JoiningDate" required="false" ms-dsml:isAnchor="false" />
+            <dsml:attribute ref="#EmployeeID" required="true" ms-dsml:isAnchor="true" />
+            <dsml:attribute ref="#objectTypeName" required="true" ms-dsml:isAnchor="true" />
+            <dsml:attribute ref="#export_password" required="false" />
+          </dsml:class>
+          <dsml:attribute-type id="City" single-value="false">
+            <dsml:name>City</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Mobile" single-value="false">
+            <dsml:name>Mobile</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="LandLine" single-value="false">
+            <dsml:name>LandLine</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="AddressLine2" single-value="false">
+            <dsml:name>AddressLine2</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="AddressLine1" single-value="false">
+            <dsml:name>AddressLine1</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="State" single-value="false">
+            <dsml:name>State</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="PostalCode" single-value="false">
+            <dsml:name>PostalCode</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Country" single-value="false">
+            <dsml:name>Country</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="LastName" single-value="true">
+            <dsml:name>LastName</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="MiddleName" single-value="true">
+            <dsml:name>MiddleName</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="CompanyCode" single-value="true">
+            <dsml:name>CompanyCode</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="CertificateID" single-value="true">
+            <dsml:name>CertificateID</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.5</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="DepartmentID" single-value="true">
+            <dsml:name>DepartmentID</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="User" single-value="true">
+            <dsml:name>User</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="FirstName" single-value="true">
+            <dsml:name>FirstName</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="BirthDate" single-value="true">
+            <dsml:name>BirthDate</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="DisplayName" single-value="true">
+            <dsml:name>DisplayName</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Initials" single-value="true">
+            <dsml:name>Initials</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="ModifiedDate" single-value="true">
+            <dsml:name>ModifiedDate</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Email" single-value="true">
+            <dsml:name>Email</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Gender" single-value="true">
+            <dsml:name>Gender</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="JoiningDate" single-value="true">
+            <dsml:name>JoiningDate</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="EmployeeID" single-value="true" ms-dsml:immutable="true">
+            <dsml:name>EmployeeID</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="objectTypeName" single-value="true" ms-dsml:immutable="true">
+            <dsml:name>objectTypeName</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="export_password" single-value="true" ms-dsml:encrypted="true" ms-dsml:export-only="true">
+            <dsml:name>export_password</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+        </dsml:directory-schema>
+      </dsml:dsml>
+    </schema>
+    <attribute-inclusion>
+    </attribute-inclusion>
+    <stay-disconnector />
+    <join />
+    <projection />
+    <export-attribute-flow />
+    <extension />
+    <controller-configuration>
+      <application-architecture>process</application-architecture>
+    </controller-configuration>
+    <ma-ui-settings>
+      <account-joiner-queries>
+        <attributes>
+        </attributes>
+        <filters max_mv_search_results="">
+        </filters>
+      </account-joiner-queries>
+    </ma-ui-settings>
+    <private-configuration>
+      <MAConfig>
+        <ui-data>
+          <xmlwizard>
+            <properties>
+              <sample_file>
+              </sample_file>
+              <code_page_description>
+              </code_page_description>
+            </properties>
+            <partitions>
+            </partitions>
+            <primary_class_mappings>
+            </primary_class_mappings>
+            <object_classes>
+            </object_classes>
+            <attributes>
+            </attributes>
+          </xmlwizard>
+          <ma-help-text>Using this connector, you can synchronize with Web Services</ma-help-text>
+        </ui-data>
+        <importing>
+        </importing>
+        <exporting>
+        </exporting>
+        <ldap-dn>0</ldap-dn>
+        <change_type_attribute>
+        </change_type_attribute>
+        <add_change_type_value>Add</add_change_type_value>
+        <modify_change_type_value>Modify</modify_change_type_value>
+        <delete_change_type_value>Delete</delete_change_type_value>
+        <primary_class_mappings>
+        </primary_class_mappings>
+        <enable-unapplied-merge>0</enable-unapplied-merge>
+        <file-type>Extensible2</file-type>
+        <extension-config>
+          <filename data-owner="ISV">Microsoft.IdentityManagement.MA.WebServices.dll</filename>
+          <import-default-page-size>30</import-default-page-size>
+          <import-max-page-size>40</import-max-page-size>
+          <export-default-page-size>30</export-default-page-size>
+          <export-max-page-size>40</export-max-page-size>
+          <export-mode data-owner="ISV">call-based</export-mode>
+          <import-mode>call-based</import-mode>
+          <export-enabled data-owner="ISV">1</export-enabled>
+          <import-enabled data-owner="ISV">1</import-enabled>
+          <discovery-partition>
+          </discovery-partition>
+          <discovery-schema>extensibility</discovery-schema>
+          <discovery-hierarchy>
+          </discovery-hierarchy>
+          <password-management-enabled>1</password-management-enabled>
+          <assembly-version>4.3.460.1</assembly-version>
+          <supports-parameters-ex>0</supports-parameters-ex>
+          <export-type>3</export-type>
+          <capability-bits>2449906224</capability-bits>
+        </extension-config>
+        <parameter-definitions refreshSchema="0" refreshPartition="0" refreshConnectivityParameters="0" refreshSchemaParameters="0" refreshCapabilitiesParameters="0" refreshGlobalParameters="0" refreshOtherParameters="0">
+          <parameter>
+            <name>
+            </name>
+            <use>connectivity</use>
+            <type>label</type>
+            <validation>
+            </validation>
+            <text>To create Web Service connector, you must select a Web Service  project and configure the host and port of the target web service</text>
+            <default-value>
+            </default-value>
+          </parameter>
+          <parameter>
+            <name>
+            </name>
+            <use>connectivity</use>
+            <type>divider</type>
+            <validation>
+            </validation>
+            <text>
+            </text>
+            <default-value>
+            </default-value>
+          </parameter>
+          <parameter>
+            <name>
+            </name>
+            <use>connectivity</use>
+            <type>label</type>
+            <validation>
+            </validation>
+            <text>The Web Service project (wsconfig file) is generated by your local web service configuration tool or can be downloaded from Microsoft download center.Only project files that were saved to your "C:\Program Files\Microsoft Forefront Identity Manager\2010\Synchronization Service\Extensions" folder are available here for a selection.</text>
+            <default-value>
+            </default-value>
+          </parameter>
+          <parameter>
+            <name>Web Service project</name>
+            <use>connectivity</use>
+            <type>drop-down</type>
+            <validation>Default</validation>
+            <text>
+            </text>
+            <default-value>Default</default-value>
+            <dropdown-extensible>0</dropdown-extensible>
+          </parameter>
+          <parameter>
+            <name>Host</name>
+            <use>connectivity</use>
+            <type>string</type>
+            <validation>(^(([a-zA-Z]|[a-zA-Z][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z]|[A-Za-z][A-Za-z0-9\-]*[A-Za-z0-9])$)|(^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$)</validation>
+            <text>
+            </text>
+            <default-value>
+            </default-value>
+          </parameter>
+          <parameter>
+            <name>Port</name>
+            <use>connectivity</use>
+            <type>string</type>
+            <validation>^[1-9]+\d*$</validation>
+            <text>
+            </text>
+            <default-value>
+            </default-value>
+          </parameter>
+          <parameter>
+            <name>
+            </name>
+            <use>connectivity</use>
+            <type>divider</type>
+            <validation>
+            </validation>
+            <text>
+            </text>
+            <default-value>
+            </default-value>
+          </parameter>
+          <parameter>
+            <name>
+            </name>
+            <use>global</use>
+            <type>label</type>
+            <validation>
+            </validation>
+            <text>The following section lists the web service security information</text>
+            <default-value>
+            </default-value>
+          </parameter>
+          <parameter>
+            <name>
+            </name>
+            <use>global</use>
+            <type>label</type>
+            <validation>
+            </validation>
+            <text>BindingType   WSHttpBinding</text>
+            <default-value>
+            </default-value>
+          </parameter>
+          <parameter>
+            <name>
+            </name>
+            <use>global</use>
+            <type>label</type>
+            <validation>
+            </validation>
+            <text>SecurityMode   Transport</text>
+            <default-value>
+            </default-value>
+          </parameter>
+          <parameter>
+            <name>
+            </name>
+            <use>global</use>
+            <type>label</type>
+            <validation>
+            </validation>
+            <text>TransportClientCredentialType   Windows</text>
+            <default-value>
+            </default-value>
+          </parameter>
+          <parameter>
+            <name>
+            </name>
+            <use>global</use>
+            <type>divider</type>
+            <validation>
+            </validation>
+            <text>
+            </text>
+            <default-value>
+            </default-value>
+          </parameter>
+          <parameter>
+            <name>User name</name>
+            <use>global</use>
+            <type>string</type>
+            <validation>
+            </validation>
+            <text>
+            </text>
+            <default-value>
+            </default-value>
+          </parameter>
+          <parameter>
+            <name>Password</name>
+            <use>global</use>
+            <type>encrypted-string</type>
+            <validation>
+            </validation>
+            <text>
+            </text>
+            <default-value>
+            </default-value>
+          </parameter>
+          <parameter>
+            <name>
+            </name>
+            <use>global</use>
+            <type>divider</type>
+            <validation>
+            </validation>
+            <text>
+            </text>
+            <default-value>
+            </default-value>
+          </parameter>
+          <parameter>
+            <name>
+            </name>
+            <use>global</use>
+            <type>label</type>
+            <validation>
+            </validation>
+            <text>Select this checkbox if you want to test your Web Service connectivity</text>
+            <default-value>
+            </default-value>
+          </parameter>
+          <parameter>
+            <name>Test Connection</name>
+            <use>global</use>
+            <type>checkbox</type>
+            <validation>
+            </validation>
+            <text>
+            </text>
+            <default-value>1</default-value>
+          </parameter>
+        </parameter-definitions>
+        <parameter-values>
+        </parameter-values>
+        <default_visible_attributes>
+          <attribute>City</attribute>
+          <attribute>Mobile</attribute>
+          <attribute>LandLine</attribute>
+          <attribute>AddressLine2</attribute>
+          <attribute>AddressLine1</attribute>
+          <attribute>State</attribute>
+          <attribute>PostalCode</attribute>
+          <attribute>Country</attribute>
+          <attribute>LastName</attribute>
+          <attribute>MiddleName</attribute>
+          <attribute>CompanyCode</attribute>
+          <attribute>CertificateID</attribute>
+          <attribute>objectTypeName</attribute>
+          <attribute>DepartmentID</attribute>
+          <attribute>User</attribute>
+          <attribute>FirstName</attribute>
+          <attribute>BirthDate</attribute>
+          <attribute>DisplayName</attribute>
+          <attribute>Initials</attribute>
+          <attribute>ModifiedDate</attribute>
+          <attribute>Email</attribute>
+          <attribute>Gender</attribute>
+          <attribute>JoiningDate</attribute>
+          <attribute>EmployeeID</attribute>
+        </default_visible_attributes>
+        <password-extension-config>
+          <password-extension-enabled>0</password-extension-enabled>
+          <dll data-owner="ISV">
+          </dll>
+          <password-set-enabled>
+          </password-set-enabled>
+          <password-change-enabled>
+          </password-change-enabled>
+          <connection-info>
+            <connect-to>
+            </connect-to>
+            <user>
+            </user>
+          </connection-info>
+          <timeout>
+          </timeout>
+        </password-extension-config>
+        <case_normalize_dn_for_anchor>1</case_normalize_dn_for_anchor>
+      </MAConfig>
+    </private-configuration>
+    <SyncConfig-refresh-schema>0</SyncConfig-refresh-schema>
+    <ma-partition-data>
+    </ma-partition-data>
+    <ma-run-data>
+    </ma-run-data>
+    <capabilities-mask>92069a31</capabilities-mask>
+    <export-type>3</export-type>
+    <dn-construction />
+    <password-sync>
+      <maximum-retry-count>10</maximum-retry-count>
+      <retry-interval>60</retry-interval>
+      <allow-low-security>0</allow-low-security>
+    </password-sync>
+    <component_mappings />
+  </ma-data>
+  <mv-data>
+    <import-attribute-flow>
+    </import-attribute-flow>
+  </mv-data>
+</export-ma>

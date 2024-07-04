@@ -1,0 +1,15 @@
+<ma-ui-settings>
+    <account-joiner-queries>
+        <attributes>
+            <cs>
+                <attribute name="&lt;DN&gt;" header="DN" size="100" />
+                <attribute name="&lt;objectType&gt;" header="objectType" size="100" />
+                <attribute name="displayname" header="displayname" size="100" />
+            </cs>
+            <mv>
+                <attribute name="displayName" header="displayName" size="100" />
+            </mv>
+        </attributes>
+        <filters max_mv_search_results=""></filters>
+    </account-joiner-queries>
+</ma-ui-settings>
