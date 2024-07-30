@@ -15,6 +15,15 @@ configuration AADSyncRules {
             $item.Ensure = 'Present'
         }
 
+        #Expression is a key property, it cannot be $null
+        foreach ($afm in $item.AttributeFlowMappings)
+        {
+            if ($null -eq $afm.Expression)
+            {
+                $afm.Expression = ''
+            }
+        }
+
         $executionName = ($item.ConnectorName + '__' + $item.Name) -replace '[\s(){}/\\:-]', '_'
         (Get-DscSplattedResource -ResourceName AADSyncRule -ExecutionName $executionName -Properties $item -NoInvoke).Invoke($item)
     }
