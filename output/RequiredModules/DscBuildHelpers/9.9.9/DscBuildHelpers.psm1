@@ -140,7 +140,7 @@ function Get-StandardCimType
     try
     {
         $types.GetEnumerator() | ForEach-Object {
-            $null = Invoke-Expression -Command "[$($_.Value)]" -ErrorAction Stop
+            $null = Invoke-Command -ScriptBlock ([scriptblock]::Create("[$($_.Value)]")) -ErrorAction Stop
             [PSCustomObject]@{
                 CimType    = $_.Key
                 DotNetType = $_.Value
@@ -533,7 +533,7 @@ function Get-DscResourceProperty
 
             try
             {
-                $result.Type = Invoke-Expression "[$($TypeName)]"
+                $result.Type = Invoke-Command -ScriptBlock ([scriptblock]::Create("[$($TypeName)]"))
 
                 if ($result.Type.IsArray)
                 {
@@ -822,7 +822,7 @@ function Get-PropertiesData
 
     $pathValue = try
     {
-        Invoke-Expression "`$Properties$($paths -join '')"
+        Invoke-Command -ScriptBlock ([scriptblock]::Create("`$Properties$($paths -join '')"))
     }
     catch
     {
